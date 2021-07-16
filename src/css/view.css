@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./font/Inter-Regular.woff') format("woff");
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./font/Inter-Medium.woff') format("woff");
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./font/Inter-Bold.woff') format("woff");
+}
+.header {
+    height: 64px;
+    box-shadow: 0px 1px 0px #E3E4E5;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+}
+.tippy-box[data-theme~=tomato] {
+    background: #4a9bff;
+}
+.tippy-box[data-theme~=tomato] .tippy-arrow {
+    color: #4a9bff;
+}
+button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+}

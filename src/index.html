@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8" />
+        <title>Getting Started</title>
+    </head>
+    <body class="bg-s20">
+        <div class="d-flex align-items-center bg-s0 header">
+            <h4>header</h4>
+        </div>
+        <div id="app"></div>
+        <div class="d-flex justify-content-center my-2">
+            <button class="cursor bg-r50 text-s0 mx-2" onclick="changeRoute('one')">Page 1</button>
+            <button class="cursor bg-y100 text-s0 mx-2" onclick="changeRoute('two')">Page 2</button>
+            <button class="cursor bg-secondary500 text-s0 mx-2" onclick="changeRoute('three')" data-tooltip data-tippy-content="Tooltip">Tooltip</button><br>
+            <button class="cursor bg-accent500 text-s0 mx-2" onclick="changeRoute('four')" data-tooltip>Toast</button><br>
+        </div>
+        <div id="includedContent" class="container my-4"></div>
+    </body>
+</html>
