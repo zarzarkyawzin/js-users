@@ -51,13 +51,13 @@ function buttonTooltip() {
 window.changeRoute = (val) => {
     // console.log('change routing--', val)
     switch(val) {
-        case 'one': window.location.href = '#/page1';
+        case 'create': window.location.href = '#/create';
             break;
-        case 'two': window.location = '#/page2';
+        case 'update': window.location = '#/update';
             break;
-        case 'three': window.location = '#/';
+        case 'userlist': window.location = '#/';
             break;
-        case 'four': console.log('copy four')
+        case 'delete': console.log('copy four')
             showToast("Show information here!!!");
             break;
     }

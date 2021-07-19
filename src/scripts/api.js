@@ -5,6 +5,11 @@ function getUserList(id) {
     return makeAjaxCall('GET', api);
 }
 
+function createUser(user) {
+    var api = `${config.apiURL}/users`;
+    return makeAjaxCall('POST', api, null, user);
+}
+
 function makeAjaxCall(requestType, url, header, body) {
     var result = false;
     var request = {
@@ -35,4 +40,4 @@ function makeAjaxCall(requestType, url, header, body) {
     });
 }
 
-export { getUserList };
+export { getUserList, createUser };

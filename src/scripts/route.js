@@ -17,7 +17,7 @@ function loadPage(pageurl, initCallback) {
 }
 
 function testRoute() {
-    loadPage('view/default.html', Controller.fetchData);
+    loadPage('view/userList.html', Controller.fetchData);
 }
 
 export { testRoute}
@@ -40,19 +40,19 @@ let route = (path, template) => {
 
 // Register the templates
 template('template-default', ()=> {
-    loadPage('view/default.html', Controller.fetchData);
+    loadPage('view/userList.html', Controller.fetchData);
 });
-template('template-page1', ()=> {
-    loadPage('view/page1.html', Controller.page1Init);
+template('template-create', ()=> {
+    loadPage('view/create.html', Controller.createInit);
 });
-template('template-page2', ()=> {
-    loadPage('view/page2.html', Controller.page2Init);
+template('template-update', ()=> {
+    loadPage('view/update.html', Controller.updateInit);
 });
 
 // Define the mappings route->template.
 route('/', 'template-default');
-route('/page1', 'template-page1');
-route('/page2', 'template-page2');
+route('/create', 'template-create');
+route('/update', 'template-update');
 
 // Give the correspondent route (template) or fail
 let resolveRoute = (route) => {

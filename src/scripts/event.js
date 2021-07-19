@@ -5,7 +5,7 @@ function fetchData() {
     ApiService.getUserList().then(res=>{
         console.log('result~~~', res);
         if(res) {
-            res.data.forEach(element => {
+            res.forEach(element => {
                 insertUser(element);
             });
         }
@@ -18,10 +18,9 @@ function insertUser (user) {
         var row = table.insertRow();
         var template = `
             <tr>
+                <td>${user.id}</td>
                 <td>${user.name}</td>
                 <td>${user.email}</td>
-                <td>${user.gender}</td>
-                <td>${user.status}</td>
             </tr>
         `;
         row.classList.add('bg-b25');
@@ -39,12 +38,33 @@ function userClick(user) {
     console.log('click--', user)
 }
 
-function page1Init() {
-    console.log('page 1 controller')
+function createInit() {
+    console.log('page 1 controller');
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+        // return false;
+        e.preventDefault();
+        console.log('form submit---');
+        onCreateUser(form);
+        form.reset();
+    });
 }
 
-function page2Init() {
+function onCreateUser(form) {
+    // event.preventDefault()
+    const formData = new FormData(form)
+    var user = {};
+    for (var pair of formData.entries()) {
+        user[pair[0]] = pair[1];
+    }
+    console.log('user create--', user)
+    ApiService.createUser(user).then(res=>{
+        console.log('result~~~', res);
+    })
+}
+
+function updateInit() {
     console.log('page 2 controller')
 }
 
-export { fetchData, page1Init, page2Init };
+export { fetchData, createInit, updateInit };

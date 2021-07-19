@@ -1,4 +1,4 @@
 export const config = {
-    apiURL: 'https://gorest.co.in/public-api', //reference here==> https://gorest.co.in/
+    apiURL: 'https://damp-hollows-84881.herokuapp.com',
     debug: true
 }
